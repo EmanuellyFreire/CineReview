@@ -82,16 +82,34 @@
 //}
 
 
-using System;
-using CineReview.Data;
+using CineReview.Application.Service;
+using CineReview.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// Configurando HttpClient para TmdbService
+
+builder.Services.AddHttpClient();
+
+// Registrando as services
+builder.Services.AddScoped<TmdbService>();
+builder.Services.AddScoped<FilmeService>();
+builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<SerieService>();
+builder.Services.AddScoped<MidiaService>();
+builder.Services.AddScoped<FavoritoService>();
+builder.Services.AddScoped<AvaliacaoService>();
+
+
+
+
 
 // Adicionando o DbContext ao contêiner de serviços
 builder.Services.AddDbContext<CineReviewContext>(options =>

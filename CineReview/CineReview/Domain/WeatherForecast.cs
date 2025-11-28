@@ -1,4 +1,4 @@
-namespace CineReview
+namespace CineReview.Domain
 {
     public class WeatherForecast
     {

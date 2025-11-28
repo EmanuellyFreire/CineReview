@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace CineReview.Data
+namespace CineReview.Infrastructure.Data
 {
     public class CineReviewContextFactory : IDesignTimeDbContextFactory<CineReviewContext>
     {

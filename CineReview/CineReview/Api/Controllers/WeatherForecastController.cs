@@ -1,6 +1,7 @@
+using CineReview.Domain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CineReview.Controllers
+namespace CineReview.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

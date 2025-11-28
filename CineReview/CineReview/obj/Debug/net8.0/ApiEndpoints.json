@@ -1,26 +1,80 @@
 [
   {
-    "ContainingType": "CineReview.Controllers.FilmeController",
+    "ContainingType": "AvaliacaoController",
+    "Method": "Avaliar",
+    "RelativePath": "api/Avaliacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aval",
+        "Type": "CineReview.Domain.Avaliacao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.FavoritoController",
+    "Method": "Adicionar",
+    "RelativePath": "api/Favorito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fav",
+        "Type": "CineReview.Domain.Favorito",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.FavoritoController",
+    "Method": "Remover",
+    "RelativePath": "api/Favorito/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.FavoritoController",
+    "Method": "Listar",
+    "RelativePath": "api/Favorito/usuario/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.FilmeController",
     "Method": "GetFilmes",
     "RelativePath": "api/Filme",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineReview.Filme, CineReview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.FilmeController",
+    "ContainingType": "CineReview.Api.Controllers.FilmeController",
     "Method": "PostFilme",
     "RelativePath": "api/Filme",
     "HttpMethod": "POST",
@@ -29,24 +83,14 @@
     "Parameters": [
       {
         "Name": "filme",
-        "Type": "CineReview.Filme",
+        "Type": "CineReview.Domain.Filme",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CineReview.Filme",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.FilmeController",
+    "ContainingType": "CineReview.Api.Controllers.FilmeController",
     "Method": "GetFilme",
     "RelativePath": "api/Filme/{id}",
     "HttpMethod": "GET",
@@ -59,23 +103,39 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CineReview.Filme",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.FilmeController",
-    "Method": "PutFilme",
-    "RelativePath": "api/Filme/{id}",
-    "HttpMethod": "PUT",
+    "ContainingType": "CineReview.Api.Controllers.FilmeController",
+    "Method": "Buscar",
+    "RelativePath": "api/Filme/buscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "termo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.FilmeController",
+    "Method": "Ranking",
+    "RelativePath": "api/Filme/ranking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.FilmeController",
+    "Method": "TestarTmdb",
+    "RelativePath": "api/Filme/teste/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -83,19 +143,56 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesExternosController",
+    "Method": "ImportarFilme",
+    "RelativePath": "api/FilmesExternos/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "filme",
-        "Type": "CineReview.Filme",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.FilmeController",
-    "Method": "DeleteFilme",
-    "RelativePath": "api/Filme/{id}",
+    "ContainingType": "CineReview.Api.Controllers.MidiaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Midia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.MidiaController",
+    "Method": "Get",
+    "RelativePath": "api/Midia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.MidiaController",
+    "Method": "Delete",
+    "RelativePath": "api/Midia/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -109,28 +206,34 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.SerieController",
-    "Method": "GetSeries",
+    "ContainingType": "CineReview.Api.Controllers.MidiaController",
+    "Method": "Buscar",
+    "RelativePath": "api/Midia/buscar/{termo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "termo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.SerieController",
+    "Method": "GetAll",
     "RelativePath": "api/Serie",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineReview.Serie, CineReview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.SerieController",
-    "Method": "PostSerie",
+    "ContainingType": "CineReview.Api.Controllers.SerieController",
+    "Method": "Create",
     "RelativePath": "api/Serie",
     "HttpMethod": "POST",
     "IsController": true,
@@ -138,25 +241,15 @@
     "Parameters": [
       {
         "Name": "serie",
-        "Type": "CineReview.Serie",
+        "Type": "CineReview.Domain.Serie",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CineReview.Serie",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.SerieController",
-    "Method": "GetSerie",
+    "ContainingType": "CineReview.Api.Controllers.SerieController",
+    "Method": "Get",
     "RelativePath": "api/Serie/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -168,21 +261,11 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CineReview.Serie",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.SerieController",
-    "Method": "PutSerie",
+    "ContainingType": "CineReview.Api.Controllers.SerieController",
+    "Method": "Update",
     "RelativePath": "api/Serie/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -195,15 +278,15 @@
       },
       {
         "Name": "serie",
-        "Type": "CineReview.Serie",
+        "Type": "CineReview.Domain.Serie",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.SerieController",
-    "Method": "DeleteSerie",
+    "ContainingType": "CineReview.Api.Controllers.SerieController",
+    "Method": "Delete",
     "RelativePath": "api/Serie/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -218,46 +301,34 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.UsuarioController",
-    "Method": "PostUser",
-    "RelativePath": "api/Usuario",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "user",
-        "Type": "CineReview.Usuario",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [],
-    "EndpointName": "PostUser"
-  },
-  {
-    "ContainingType": "CineReview.Controllers.UsuarioController",
+    "ContainingType": "CineReview.Api.Controllers.UsuarioController",
     "Method": "GetAll",
     "RelativePath": "api/Usuario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[CineReview.Usuario, CineReview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetUsers"
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.UsuarioController",
-    "Method": "GetById",
+    "ContainingType": "CineReview.Api.Controllers.UsuarioController",
+    "Method": "Create",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "CineReview.Domain.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineReview.Api.Controllers.UsuarioController",
+    "Method": "Get",
     "RelativePath": "api/Usuario/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -272,8 +343,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.UsuarioController",
-    "Method": "Put",
+    "ContainingType": "CineReview.Api.Controllers.UsuarioController",
+    "Method": "Update",
     "RelativePath": "api/Usuario/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -285,15 +356,15 @@
         "IsRequired": true
       },
       {
-        "Name": "user",
-        "Type": "CineReview.Usuario",
+        "Name": "usuario",
+        "Type": "CineReview.Domain.Usuario",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.UsuarioController",
+    "ContainingType": "CineReview.Api.Controllers.UsuarioController",
     "Method": "Delete",
     "RelativePath": "api/Usuario/{id}",
     "HttpMethod": "DELETE",
@@ -309,7 +380,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineReview.Controllers.WeatherForecastController",
+    "ContainingType": "CineReview.Api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
     "HttpMethod": "GET",
@@ -318,7 +389,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineReview.WeatherForecast, CineReview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineReview.Domain.WeatherForecast, CineReview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
