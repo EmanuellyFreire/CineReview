@@ -16,6 +16,91 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AvaliacaoController",
+    "Method": "Obter",
+    "RelativePath": "api/Avaliacao/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliacaoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Avaliacao/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dados",
+        "Type": "CineReview.Domain.Avaliacao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliacaoController",
+    "Method": "Remover",
+    "RelativePath": "api/Avaliacao/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliacaoController",
+    "Method": "ListarPorMidia",
+    "RelativePath": "api/Avaliacao/midia/{midiaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "midiaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliacaoController",
+    "Method": "ListarPorUsuario",
+    "RelativePath": "api/Avaliacao/usuario/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CineReview.Api.Controllers.FavoritoController",
     "Method": "Adicionar",
     "RelativePath": "api/Favorito",
